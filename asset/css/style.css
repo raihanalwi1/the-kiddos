@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+/* NAVBAR  */
+nav {
+    font-weight: bold;
+    background-color: #f105ba;
+    /* -webkit-text-fill-color: azure; */
+}
+.navbar-brand i{
+    color: #FDA8F8;
+}
+.navbar-brand a{
+    color: #FDA8F8;
+}
+.nav-item a:hover{
+    color: #FDA8F8;
+}
+.nav-item a.active{
+    color: #FDA8F8;
+}
+nav li{
+    margin-left: 16px;
+}
+/* BTN LOGIN */
+    .btn-login{
+        color: #000;
+        text-decoration: none;
+        padding: 0px 20px 0px 0px;
+        font-size: 20px;
+    }
+    .btn-login i{
+        color: #FDA8F8;
+    }
+    /*  Khusus Navbar */
+    .navbar .btn-login:hover{
+        color: #FDA8F8;
+        text-decoration: none;
+    }
+    .btn-login i{
+    font-size: 25px;
+    }
+
+/* Tentang-kami */
+.tentang-kami h3{
+    color: #FDA8F8;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.tentang-kami p{
+    font-size: 16px;
+}
+.btn-utama{
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #FDA8F8;
+    border-radius: 10px;
+}
+.btn-utama:hover{
+    color: #fff;
+    text-decoration: none;
+    background-color: #FDA8F8;
+    transition: 1s;
+}
+
+/* VISIT */
+.visit h3{
+    color: #FDA8F8;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.visit p{
+    font-size: 16px;
+}
+
+
+/* FOOTER */
