@@ -62,32 +62,41 @@ button:hover {
 </style>
 <div class="content">
       <h2>Data Registrasi Anak</h2>
+      <?= $this->session->flashdata('pesan'); ?>
       <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Cari berdasarkan nama...">
-        <button type="button" id="searchButton">Cari</button>
+          <input type="text" id="searchInput" name="searchKeyword" placeholder="Cari berdasarkan nama...">
+          <button type="button" id="searchButton">Cari</button>
       </div>
       <table>
         <thead>
           <tr>
             <th>NO</th>
             <th>Nama Anak</th>
+            <th>Tanggal Registrasi</th>
             <th>Aksi</th>
           </tr>
         </thead>
         <?php $no=1;
         foreach($record as $row):?>
-        <tbody>
+        <tbody id="dataBody">
           <tr>
             <td><?= $no++?></td>
             <td><?= $row->nama_anak?></td>
+            <td><?= $row->tanggal_registrasi?></td>
             <td>
               <button  onclick="window.location.href='<?= base_url('admin/detail_anak/'. $row->id_registrasi)?>';">Lihat</button>
               <button  onclick="window.location.href='#';">Edit</button>
-              <button onclick="window.location.href='#';">Hapus</button>
+              <button onclick="window.location.href='<?= base_url('admin/hapus/'. $row->id_registrasi)?>';">Hapus</button>
             </td>
           </tr>
           
           <!-- Data lainnya -->
         </tbody>
         <?php endforeach;?>
+        
       </table>
+      <!-- <div id="pagination"> -->
+      <!-- Tampilkan link halaman di sini -->
+      <!-- </div> -->
+      <script src="<?= base_url('asset/js/script-dataAnak.js')?>">  
+      </script>

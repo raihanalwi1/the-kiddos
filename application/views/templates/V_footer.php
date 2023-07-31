@@ -19,9 +19,9 @@
         <footer class="py-5">
             <div class="row">
             <div class="col-6 col-md-3 mb-3">
-                <h5>About Us Kiddosoft</h5>
+                <h5>About Us The Kiddos </h5>
                 <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                    <p>Where does it come from? Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                    <p>merupakan program belajar untuk para orangtua dan anak khususnya bagi pendidikan anak usia 0 - 6 tahun. Dalam program ini kami akan membedah tentang ilmu pengasuhan anak, pendidikan, sekolah dan lain lainya yang tentunya bermanfaat untuk orangtua dan anak.</p>
                 </div>
             </div>
 
@@ -30,17 +30,17 @@
                 <h5>Contact information</h5>
                 <ul class="nav flex-column">
                 <li class="nav-item mb-2"><p><i class="ri-home-3-line" style="color: #FDA8F8;font-size: 20px;"></i> Grand PGRI Residence 1 Tarumajaya Bekasi</p></li>
-                <li class="nav-item mb-2"><p><i class="ri-smartphone-line" style="color: #FDA8F8;font-size: 20px;"></i> <a href="telp:+6285892638671">+62 858 92638671</a> OR <a href="telp:081284844535a">081284844535a</a></p></li>
+                <li class="nav-item mb-2"><p><i class="ri-smartphone-line" style="color: #FDA8F8;font-size: 20px;"></i> <a href="telp:+6285892638671">+62 858 92638671</a> OR <a href="telp:081284844535a">081284844535</a></p></li>
                 </ul>
             </div>
 
             <div class="col-6 col-md-3 mb-3">
                 <h5>Menu Link</h5>
                 <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-muted">Beranda</a></li>
-                <li class="nav-item mb-2"><a href="about_us.php" class="nav-link p-0 text-muted">About Us</a></li>
-                <li class="nav-item mb-2"><a href="visit.php" class="nav-link p-0 text-muted">Visit Us</a></li>
-                <li class="nav-item mb-2"><a href="login.php" class="nav-link p-0 text-muted">Login</a></li>
+                <li class="nav-item mb-2"><a href="<?= base_url('')?>" class="nav-link p-0 text-muted">Beranda</a></li>
+                <li class="nav-item mb-2"><a href="<?= base_url('home/aboutus')?>" class="nav-link p-0 text-muted">About Us</a></li>
+                <li class="nav-item mb-2"><a href="<?= base_url('home/aboutus')?>" class="nav-link p-0 text-muted">Visit Us</a></li>
+                <li class="nav-item mb-2"><a href="<?= base_url('auth')?>" class="nav-link p-0 text-muted">Login</a></li>
                 </ul>
             </div>
 
@@ -61,7 +61,7 @@
             <p>&copy; 2019 – <?php echo date('Y'); ?> The Kiddos Project. All right reserved &middot; <a href="<?= base_url('home/privacy')?>">Privacy</a> &middot; <a href="#">Terms</a></p>
             <ul class="list-unstyled d-flex">
                 <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="https://www.instagram.com/the.kiddosofc/"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
                 <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
                 <li class="ms-3"><a class="link-dark" href="https://raihanalwi1.github.io/The-kiddosoft/" target="_Blank"><svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg></a></li>
             </ul>

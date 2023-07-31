@@ -18,6 +18,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/index');
 		$this->load->view('admin/templates/V_footer_admin');
 	}
+    
     public function data_anak(){
         $data = ['title' => 'List data Anak '];
         $anak['record'] = $this->M_registrasiAnak->get_register();
@@ -31,5 +32,10 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/templates/V_header_admin', $data);
 		$this->load->view('admin/V_detailAnak', $anak);
 		$this->load->view('admin/templates/V_footer_admin');
+    }
+    public function hapus($id){
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success">Data Berhasil di Hapus!</div>');
+        $this->M_registrasiAnak->hapus_registrasi($id);
+        redirect('admin/data_anak');
     }
 }

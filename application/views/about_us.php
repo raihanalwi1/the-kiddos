@@ -12,12 +12,12 @@
           <div class="container">
               <div class="row">
                   <div class="col-md-6 mt-3">
-                      <img src="asset/image/profile.jpg" class="img-fluid" alt="..." />
+                      <img src="<?= base_url('asset/image/about.png')?>" class="img-fluid" alt="..." />
                   </div>
                   <div class="col-md-6 mt-3">
-                    <h3>Kiddosoft</h3>
+                    <h3>The Kiddos Project </h3>
                       <p>
-                          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                      The Kiddos Project merupakan program belajar untuk para orangtua dan anak khususnya bagi pendidikan anak usia 0 - 6 tahun. Dalam program ini kami akan membedah tentang ilmu pengasuhan anak, pendidikan, sekolah dan lain lainya yang tentunya bermanfaat untuk orangtua dan anak. Kami ingin membagikan berbagai macam ilmu dan pengalaman dari para prakstisi profesional yang sesuai dengan bidang pendidikan anak usia dini untuk membantu para orangtua dan anak di rumah maupun di sekolah, termasuk penguatan bagi guru guru anak usia dini di sekolah ?
                       </p>
                   </div>
               </div>

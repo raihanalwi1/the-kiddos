@@ -70,7 +70,7 @@
   
   <hr>
   <h2>Form Registrasi Anak</h2>
-  <form action="proses_registrasi.php" method="POST">
+  <form action="<?= base_url('home/form_registrasi')?>" method="POST">
     <div class="form-group">
       <label for="namaAnak">Nama Anak:</label>
       <input type="text" id="namaAnak" name="namaAnak" required>
@@ -78,56 +78,56 @@
     
     <div class="form-group">
       <label for="usiaAnak">Usia Anak:</label>
-      <input type="number" id="usia" name="usia" required>
+      <input type="number" id="usia" name="usia" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" required>
     </div>
     
     <div class="form-group">
       <label for="tanggalKelas">Pilih Tanggal Kelas:</label>
       <input type="date" id="tanggalKelas" name="tanggalKelas" required>
+      
     </div>
 
     <div class="form-group">
       <label for="usiaKelas">Usia Anak (Baby/Toddler):</label>
-      <input type="checkbox" value="Baby"> Baby (6 - 12 Month) <br>
-      <input type="checkbox" value="Toddler"> Toddler (1 - 3 Year) <br>
+      <input type="checkbox" id="usiaKelas1" name="usiaKelas" value="Baby"> Baby (6 - 12 Month) <br>
+      <input type="checkbox" id="usiaKelas2" name="usiaKelas" value="Toddler"> Toddler (1 - 3 Year) <br>
     </div>
 
     <div class="form-group">
       <label for="lokasiKelas">Lokasi Kelas:</label>
       <select id="lokasiKelas" name="lokasiKelas" required>
-        <option value="rawaMangun">Rawa Mangun</option>
+        <option value="Rawa Mangun">Rawa Mangun</option>
         <option value="JGC">JGC</option>
-        <option value="durenSawit">Duren Sawit</option>
-        <option value="bekasi">Bekasi</option>
+        <option value="Duren Sawit">Duren Sawit</option>
+        <option value="Bekasi">Bekasi</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label>Pertanyaan 1 (Ya/Tidak):</label>
-      <input type="radio" name="pertanyaan1" value="Ya" required> Iya
+      <label>Apakah anak sedang atau pernah menjalani terapi tumbuh kembang? (Ya/Tidak):</label>
+      <input type="radio" name="pertanyaan1" value="Iya" required> Iya
       <input type="radio" name="pertanyaan1" value="Tidak" required>Tidak
-      <input type="text" placeholder="Jika Iya, Jelaskan">
+      <input type="text" name="q1_ex" id="q1_ex" placeholder="Jika Iya, Jelaskan">
     </div>
 
     <div class="form-group">
-      <label>Pertanyaan 2 (Ya/Tidak):</label>
-      <input type="radio" name="pertanyaan2" value="Ya" required>Iya
+      <label>Apakah anak memiliki alergi? (Ya/Tidak):</label>
+      <input type="radio" name="pertanyaan2" value="Iya" required>Iya
       <input type="radio" name="pertanyaan2" value="Tidak" required> Tidak
-      <input type="text" placeholder="Jika Iya, Jelaskan">
+      <input type="text" name="q2_ex" id="q2_ex" placeholder="Jika Iya, Jelaskan">
     </div>
 
     <div class="form-group">
-      <label>Pertanyaan 3 (Ya/Tidak):</label>
-      <input type="radio" name="pertanyaan3" value="Ya" required> Iya
+      <label>Apakah anak memiliki riwayat penyakit tertentu? (Ya/Tidak):</label>
+      <input type="radio" name="pertanyaan3" value="Iya" required> Iya
       <input type="radio" name="pertanyaan3" value="Tidak" required>Tidak
-      <input type="text" placeholder="Jika Iya, Jelaskan">
+      <input type="text" name="q3_ex" id="q3_ex" placeholder="Jika Iya, Jelaskan">
     </div>
 
     <div class="form-group">
-      <label>Pertanyaan 4 (Ya/Tidak):</label>
-      <input type="radio" name="pertanyaan4" value="Ya" required> Iya
+      <label>Apakah anak di perbolehkan di foto/video atau di post di media sosial The Kiddos? (Ya/Tidak):</label>
+      <input type="radio" name="pertanyaan4" value="Iya" required> Iya
       <input type="radio" name="pertanyaan4" value="Tidak" required>Tidak
-      <input type="text" placeholder="Jika Iya, Jelaskan">
     </div>
 
     <button type="submit" id="submitButton" disabled>Daftar</button>
@@ -135,13 +135,47 @@
 
   <script>
     
-    // Mengambil elemen opsi pertama dan tombol submit berdasarkan id
-    var option1 = document.getElementById("option1");
-    var submitButton = document.getElementById("submitButton");
+    function validateForm() {
+      // Mendapatkan nilai dari setiap elemen input
+      const namaAnak = document.getElementById('namaAnak').value;
+      const usiaAnak = document.getElementById('usia').value;
+      const tanggalKelas = document.getElementById('tanggalKelas').value;
+      const usiaKelas1 = document.getElementById('usiaKelas1').checked;
+      const usiaKelas2 = document.getElementById('usiaKelas2').checked;
+      const lokasiKelas = document.getElementById('lokasiKelas').value;
+      const pertanyaan1 = document.querySelector('input[name="pertanyaan1"]:checked');
+      const pertanyaan2 = document.querySelector('input[name="pertanyaan2"]:checked');
+      const pertanyaan3 = document.querySelector('input[name="pertanyaan3"]:checked');
+      const pertanyaan4 = document.querySelector('input[name="pertanyaan4"]:checked');
 
-    // Menambahkan event listener pada elemen select jika opsi selain pertama dipilih
-    document.getElementById("usiaKelas").addEventListener("change", function() {
-      // Mengaktifkan kembali tombol submit jika opsi selain pertama dipilih
-      submitButton.disabled = false;
+      // Memeriksa apakah semua input telah diisi
+      if (
+        namaAnak.trim() === '' ||
+        usiaAnak.trim() === '' ||
+        tanggalKelas.trim() === '' ||
+        (usiaKelas1 === false && usiaKelas2 === false) ||
+        lokasiKelas.trim() === '' ||
+        !pertanyaan1 || !pertanyaan2 || !pertanyaan3 || !pertanyaan4
+      ) {
+        return false; // Mencegah form submit jika data belum diisi lengkap
+      }
+
+      return true; // Izinkan form submit jika data telah diisi lengkap
+    }
+
+    // Event listener untuk memantau perubahan pada form
+    const formInputs = document.querySelectorAll('input, select');
+    formInputs.forEach(input => {
+      input.addEventListener('change', function() {
+        const submitButton = document.getElementById('submitButton');
+        const isFormValid = validateForm();
+
+        // Mengaktifkan atau menonaktifkan tombol "Daftar" berdasarkan validitas form
+        if (isFormValid) {
+          submitButton.removeAttribute('disabled');
+        } else {
+          submitButton.setAttribute('disabled', 'true');
+        }
+      });
     });
   </script>

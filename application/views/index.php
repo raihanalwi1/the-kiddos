@@ -7,13 +7,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="<?= base_url('asset/image/Slide_1.jpg')?>" class="d-block w-100" alt="..." />
+                    <img src="<?= base_url('asset/image/Slide_1.png')?>" class="d-block w-100" alt="..." />
                 </div>
                 <div class="carousel-item">
-                    <img src="asset/image/Slide_2.jpg" class="d-block w-100" alt="..." />
+                    <img src="<?= base_url('asset/image/Slide_2.png')?>" class="d-block w-100" alt="..." />
                 </div>
                 <div class="carousel-item">
-                    <img src="asset/image/Slide_3.jpg" class="d-block w-100" alt="..." />
+                    <img src="<?= base_url('asset/image/Slide_3.jpg')?>" class="d-block w-100" alt="..." />
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -25,7 +25,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-<div class="p-1 mb-4 bg-body-tertiary rounded-3">
+        <div class="p-1 mb-4 bg-body-tertiary rounded-3">
             <div class="container py-5 text-center">
             </div>
         </div>
@@ -37,17 +37,14 @@
           <div class="container">
               <div class="row">
                   <div class="col-md-6 mt-3">
-                      <img src="asset/image/profile.jpg" class="img-fluid" alt="..." />
+                      <img src="<?= base_url('asset/image/about.png')?>" class="img-fluid" alt="..." />
                   </div>
                   <div class="col-md-6 mt-3">
-                    <h3>Kiddosoft</h3>
+                    <h3>The Kiddos Project</h3>
                       <p>
-                          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                          type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                          release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact
-                          that a reader will be distracted by the readable content of a page when looking at its layout.
+                      merupakan program belajar untuk para orangtua dan anak khususnya bagi pendidikan anak usia 0 - 6 tahun. Dalam program ini kami akan membedah tentang ilmu pengasuhan anak, pendidikan, sekolah dan lain lainya yang tentunya bermanfaat untuk orangtua dan anak. Kami ingin membagikan berbagai macam ilmu dan pengalaman dari para prakstisi profesional yang sesuai dengan bidang pendidikan anak usia dini untuk membantu para orangtua dan anak di rumah maupun di sekolah, termasuk penguatan bagi guru guru anak usia dini di sekolah ?
                       </p>
-                      <a class="btn-utama" href="about_us.php">About Us</a>
+                      <a class="btn-utama" href="<?= base_url('home/form_registrasi')?>">Tertarik untuk mendaftar? Klik disini</a>
                   </div>
               </div>
           </div>
@@ -59,5 +56,6 @@
         <!-- DIVIDER #2 -->
         <div class="p-5 mb-4 bg-body-tertiary rounded-3">
             <div class="container py-5 text-center">
+                
             </div>
         </div>

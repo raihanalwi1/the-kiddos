@@ -15,4 +15,10 @@ class M_registrasiAnak extends CI_model
         $query = $this->db->get_where('tb_registrasi', array('id_registrasi' => $id));
         return $query->row();
     }
+    
+    public function hapus_registrasi($id){
+        $this->db->where('id_registrasi', $id);
+        $this->db->delete('tb_registrasi');
+        return $this->db->affected_rows();
+    }
 }
