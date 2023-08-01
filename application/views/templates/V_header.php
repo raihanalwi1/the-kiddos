@@ -17,6 +17,7 @@
         <link rel="stylesheet" type="text/css" href="<?= base_url('asset/css/bootstrap.css')?>" />
         <link rel="stylesheet" type="text/css" href="<?= base_url('asset/css/bootstrap.min.css')?>" />
         <link rel="stylesheet" type="text/css" href="<?= base_url('asset/css/style.css')?>" />
+        <link rel="stylesheet" type="text/css" href="<?= base_url('asset/css/whatsapp.css')?>" />
         <title><?= $title?></title>
     </head>
     <body>

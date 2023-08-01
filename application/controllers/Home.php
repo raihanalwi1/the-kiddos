@@ -5,7 +5,8 @@ class Home extends CI_Controller {
 	public function __construct(){
         parent::__construct();
         $this->load->model('M_registrasiAnak');
-		
+		$this->load->helper('url');
+		$this->load->library('email');
 	}
 	
 	public function index()
@@ -27,6 +28,37 @@ class Home extends CI_Controller {
 		$this->load->view('visit');
 		$this->load->view('templates/V_footer');
 	}
+	public function send_email() {
+		  $nama = $this->input->post('name');
+		  $email = $this->input->post('email');
+		  $subjek = $this->input->post('subject');
+		  $pesan = $this->input->post('pesan');
+	
+		  // Konfigurasi email
+		  $config['mailtype'] = 'html';
+		  $this->email->initialize($config);
+	
+		  // Pengirim email
+		  $this->email->from($email, $nama);
+	
+		  // Penerima email
+		  $this->email->to('raihanalwi51@gmail.com'); // Ganti dengan alamat email penerima
+	
+		  // Subjek email
+		  $this->email->subject($subjek);
+	
+		  // Isi email
+		  $this->email->message($pesan);
+	
+		  // Kirim email
+		  if ($this->email->send()) {
+			// Kirim email berhasil, redirect ke halaman terima kasih
+			redirect('home/visit');
+		  } else {
+			// Kirim email gagal, tampilkan pesan error
+			echo $this->email->print_debugger();
+		  }
+	  }
     public function privacy(){
 		$data = ['title' => 'Law Privacy The Kiddos Project'];
 		$this->load->view('templates/V_header', $data);

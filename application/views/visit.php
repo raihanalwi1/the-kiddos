@@ -16,22 +16,22 @@
                     <div class="col-md-6 mt-3">
                         <h3>Contact Message</h3>
 
-                        <form class="row g-3 mt-4">
+                        <form action="#" method="post" class="row g-3 mt-4">
                             <div class="col-md-6">
                                 <label for="name" class="form-label">Nama</label>
-                                <input type="text" class="form-control" id="name" />
+                                <input type="text" class="form-control" name="name" id="name" />
                             </div>
                             <div class="col-md-6">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" />
+                                <input type="email" class="form-control" name="email" id="email" />
                             </div>
                             <div class="col-12">
                                 <label for="judul" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="judul"/>
+                                <input type="text" class="form-control" name="subject" id="subject"/>
                             </div>
                             <div class="col-md-12">
                                 <label for="isi" class="form-label">Message</label>
-                               	 <textarea class="form-control" id="isi" rows="5" style="width: 100%;"></textarea>
+                               	 <textarea class="form-control" id="isi" rows="5" name="pesan" style="width: 100%;"></textarea>
                             </div>
                             <div class="d-grid gap-2 col-6">
                                 <button type="submit" class="btn btn-outline-info">Kirim</button>
