@@ -78,7 +78,7 @@
     
     <div class="form-group">
       <label for="usiaAnak">Usia Anak:</label>
-      <input type="text" id="usia" name="usia" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;" required>
+      <input type="text" id="usia" name="usia" maxlength="8" required>
     </div>
     
     <div class="form-group">
@@ -131,6 +131,7 @@
     </div>
 
     <button type="submit" id="submitButton" disabled>Daftar</button>
+    <a type="button" href="<?= base_url()?>" class="btn btn-primary">Kembali</a>
   </form>
 
   <script src="<?= base_url('asset/js/form-registrasi.js')?>">

@@ -26,7 +26,7 @@
 <!------------------ HEADER ------------------>
 <nav class="navbar sticky-top navbar-expand-lg shadow-sm">
     <div class="container">
-       <a class="navbar-brand" href="#">
+       <a class="navbar-brand" href="<?= base_url() ?>">
           <img src="<?= base_url('asset/image/logo.jpg')?>" alt="Logo" width="80" height="70" class="d-inline-block align-text-top">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,6 +42,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('/home/visit') ?>">Visit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('/home/form_registrasi') ?>"><i class="bi bi-heart">Daftar Disini</i></a>
                 </li>
             </ul>
             <span class="navbar-text">

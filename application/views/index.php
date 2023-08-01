@@ -1,9 +1,12 @@
 <!-- DIVIDER #2 -->
+      <?= $this->session->flashdata('pesan'); ?>
+        
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -13,7 +16,10 @@
                     <img src="<?= base_url('asset/image/Slide_2.png')?>" class="d-block w-100" alt="..." />
                 </div>
                 <div class="carousel-item">
-                    <img src="<?= base_url('asset/image/Slide_3.jpg')?>" class="d-block w-100" alt="..." />
+                    <img src="<?= base_url('asset/image/Slide_3.png')?>" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="<?= base_url('asset/image/Slide_4.png')?>" class="d-block w-100" alt="..." />
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -27,6 +33,7 @@
         </div>
         <div class="p-1 mb-4 bg-body-tertiary rounded-3">
             <div class="container py-5 text-center">
+            <h4>Selamat Datang </h4>
             </div>
         </div>
 
@@ -53,9 +60,4 @@
         <!-- DIVIDER -->
         <div style="margin: 80px;"></div>
 
-        <!-- DIVIDER #2 -->
-        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-            <div class="container py-5 text-center">
-                
-            </div>
-        </div>
+        

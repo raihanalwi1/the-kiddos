@@ -56,7 +56,4 @@
         <!-- DIVIDER -->
         <div style="margin: 80px;"></div>
 
-        <!-- DIVIDER #2 -->
-        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-            <div class="container py-5 text-center"></div>
-        </div>
+        

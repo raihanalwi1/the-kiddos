@@ -1,5 +1,64 @@
    
    <?php  ?>
+        <!-- DIVIDER #2 -->
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+            <div class="container py-5 text-center">
+                <style>
+                               /* styles.css */
+                .sponsor-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                }
+
+                .sponsor-item {
+                flex: 0 0 100px; /* Set lebar elemen sponsor */
+                margin: 10px; /* Tambahkan margin untuk jarak antar elemen */
+                }
+
+                .sponsor-item img {
+                max-width: 100%; /* Atur ukuran gambar sponsor agar sesuai dengan lebar elemen */
+                height: auto;
+                }
+
+                /* Gunakan media query untuk tampilan layar lebih kecil */
+                @media screen and (max-width: 768px) {
+                .sponsor-container {
+                    flex-wrap: wrap; /* Wrap elemen sponsor saat layar kecil */
+                    justify-content: center; /* Pusatkan elemen sponsor saat layar kecil */
+                }
+
+                .sponsor-item {
+                    flex: 0 0 calc(50% - 20px); /* Set lebar elemen sponsor menjadi 50% dari layar saat layar kecil */
+                    margin: 10px; /* Tambahkan margin untuk jarak antar elemen */
+                }
+                }
+
+
+                </style>
+                <div class="sponsor-container">
+                    <div class="sponsor-item">
+                        <a href="https://www.asya.co.id/"><img src="<?= base_url('asset/image/sponsor (1).jpg')?>" alt="Sponsor 1"></a>
+                    </div>
+                    <div class="sponsor-item">
+                        <a href="https://metropolitanland.com/id"><img src="<?= base_url('asset/image/sponsor (2).jpg') ?>" alt="Sponsor 2"></a>
+                    </div>
+                    <div class="sponsor-item">
+                        <a href="https://www.instagram.com/meetnwork.id/"><img src="<?= base_url('asset/image/sponsor (3).jpg') ?>" alt="Sponsor 3"></a>
+                    </div>
+                    <div class="sponsor-item">
+                        <a href="https://www.masalalu.id/"><img src="<?= base_url('asset/image/sponsor (4).jpg') ?>" alt="Sponsor 4"></a>
+                    </div>
+                    <div class="sponsor-item">
+                        <a href="https://grandmetropolitan.co.id/?p=5602"><img src="<?= base_url('asset/image/sponsor (5).jpg') ?>" alt="Sponsor 5"></a>
+                    </div>
+                    <div class="sponsor-item">
+                        <a href="https://www.instagram.com/waterplayid/"><img src="<?= base_url('asset/image/sponsor (6).jpg') ?>" alt="Sponsor 6"></a>
+                    </div>
+                </div>
+                <hr>
+        </div>
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="facebook" viewBox="0 0 16 16">
             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
@@ -49,7 +108,7 @@
             <div class="col-md-3 mb-3">
                 <form>
                 <h5>Subscribe to our newsletter</h5>
-                <p>Where does it come from? Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                <p>Jika ingin mendapatkan info terbaru dari website kami.</p>
                 <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                     <label for="newsletter1" class="visually-hidden">Email address</label>
                     <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
@@ -61,12 +120,12 @@
 
             <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
             <p>&copy; 2019 – <?php echo date('Y'); ?> The Kiddos Project. All right reserved &middot; <a href="<?= base_url('home/privacy')?>">Privacy</a> &middot; <a href="#">Terms</a></p>
-            <ul class="list-unstyled d-flex">
+            <ul class="list-unstyled d-flex"> Sosial Media Kami 
                 <li class="ms-3"><a class="link-dark" href="https://www.tiktok.com/@thekiddosproject"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
                 <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
                 </svg></a></li>
                 <li class="ms-3"><a class="link-dark" href="https://www.instagram.com/the.kiddosofc/"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-                <li class="ms-3"><a class="link-dark" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <li class="ms-3"><a class="link-dark" href="mailto:thekiddosofc@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                 <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
                 </svg></a></li>
             </ul>

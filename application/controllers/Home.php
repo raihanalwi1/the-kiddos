@@ -17,13 +17,13 @@ class Home extends CI_Controller {
 		$this->load->view('templates/V_footer');
 	}
 	public function aboutus(){
-        $data = ['title' => 'ABOUT US'];
+        $data = ['title' => 'About Us || The Kiddos Project'];
 		$this->load->view('templates/V_header', $data);
 		$this->load->view('about_us');
 		$this->load->view('templates/V_footer');
 	}
 	public function visit(){
-        $data = ['title' => 'Visit Kiddos'];
+        $data = ['title' => 'Visit Kiddos  || The Kiddos Project'];
 		$this->load->view('templates/V_header', $data);
 		$this->load->view('visit');
 		$this->load->view('templates/V_footer');
@@ -85,6 +85,7 @@ class Home extends CI_Controller {
 				'q3_ex' => $this->input->post('q3_ex'),
 				'q4' => $this->input->post('pertanyaan4')
 			);
+			$this->session->set_flashdata('pesan', '<div class="alert alert-success">Pengisian Registrasi Telah berhasil!</div>');
 			$this->M_registrasiAnak->tambah_register($data);
 			redirect('home/', 'refresh');
 			}

@@ -47,6 +47,10 @@
         <span class="value"><?= $record->usia?></span>
       </div>
       <div class="field">
+        <span class="label">Usia Kelas:</span>
+        <span class="value"><?= $record->usia_kelas?></span>
+      </div>
+      <div class="field">
         <span class="label">Tanggal Kelas:</span>
         <span class="value"><?= $record->tanggal_kelas?></span>
       </div>

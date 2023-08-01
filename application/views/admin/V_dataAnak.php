@@ -85,7 +85,7 @@ button:hover {
             <td><?= $row->tanggal_registrasi?></td>
             <td>
               <button  onclick="window.location.href='<?= base_url('admin/detail_anak/'. $row->id_registrasi)?>';">Lihat</button>
-              <button  onclick="window.location.href='#';">Edit</button>
+              <!-- <button  onclick="window.location.href='#';">Edit</button> -->
               <button onclick="window.location.href='<?= base_url('admin/hapus/'. $row->id_registrasi)?>';">Hapus</button>
             </td>
           </tr>
