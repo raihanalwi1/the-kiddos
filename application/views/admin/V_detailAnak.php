@@ -55,6 +55,14 @@
         <span class="value"><?= $record->tanggal_kelas?></span>
       </div>
       <div class="field">
+        <span class="label">No WhatsApp: </span>
+        <span class="value"><?= $record->no_wa?></span>
+      </div>
+      <div class="field">
+        <span class="label">Email:</span>
+        <span class="value"><?= $record->email?></span>
+      </div>
+      <div class="field">
         <span class="label">Lokasi Kelas:</span>
         <span class="value"><?= $record->lokasi_kelas?></span>
       </div>

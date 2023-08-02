@@ -28,6 +28,12 @@ class Home extends CI_Controller {
 		$this->load->view('visit');
 		$this->load->view('templates/V_footer');
 	}
+	public function galeri(){
+        $data = ['title' => 'Galeri Kiddos  || The Kiddos Project'];
+		$this->load->view('templates/V_header', $data);
+		$this->load->view('galeri');
+		$this->load->view('templates/V_footer');
+	}
 	public function send_email() {
 		  $nama = $this->input->post('name');
 		  $email = $this->input->post('email');
@@ -74,6 +80,8 @@ class Home extends CI_Controller {
 				'nama_anak' => $this->input->post('namaAnak'),
 				'usia' => $this->input->post('usia'),
 				'tanggal_kelas' => $this->input->post('tanggalKelas'),
+				'no_wa' => $this->input->post('noWa'),
+				'email' => $this->input->post('email'),
 				'usia_kelas' => $this->input->post('usiaKelas'),
 				'lokasi_kelas' => $this->input->post('lokasiKelas'),
 				'tanggal_registrasi' => $waktuSekarang,
@@ -85,7 +93,7 @@ class Home extends CI_Controller {
 				'q3_ex' => $this->input->post('q3_ex'),
 				'q4' => $this->input->post('pertanyaan4')
 			);
-			$this->session->set_flashdata('pesan', '<div class="alert alert-success">Pengisian Registrasi Telah berhasil!</div>');
+			$this->session->set_flashdata('pesan', '<div class="alert alert-success">Pengisian Registrasi Telah berhasil! Silahkan hubungi admin..</div>');
 			$this->M_registrasiAnak->tambah_register($data);
 			redirect('home/', 'refresh');
 			}

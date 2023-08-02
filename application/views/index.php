@@ -48,8 +48,14 @@
                   </div>
                   <div class="col-md-6 mt-3">
                     <h3>The Kiddos Project</h3>
-                      <p>
-                      merupakan program belajar untuk para orangtua dan anak khususnya bagi pendidikan anak usia 0 - 6 tahun. Dalam program ini kami akan membedah tentang ilmu pengasuhan anak, pendidikan, sekolah dan lain lainya yang tentunya bermanfaat untuk orangtua dan anak. Kami ingin membagikan berbagai macam ilmu dan pengalaman dari para prakstisi profesional yang sesuai dengan bidang pendidikan anak usia dini untuk membantu para orangtua dan anak di rumah maupun di sekolah, termasuk penguatan bagi guru guru anak usia dini di sekolah ?
+                      <p style="text-align: justify;">
+                      sebuah lembaga Pendidikan Anak Usia Dini Informal
+                        dalam bentuk Playschool atau sekolah bermain. The Kiddos Project telah berdiri sejak
+                        tahun 2019 dengan program playdate dan pop-up school untuk anak usia dini. Dalam
+                        programnya, anak – anak dapat mengikuti program belajar dan bermain bersama
+                        pendamping atau orangtuanya sambil bermain dengan teman sebaya. Tidak hanya itu,
+                        program-program ini dibuat juga untuk menstimulasi perkembangan anak mulai dari
+                        sensorik, motorik, dan keterampilan lain termasuk sosial.
                       </p>
                       <a class="btn-utama" href="<?= base_url('home/form_registrasi')?>">Tertarik untuk mendaftar? Klik disini</a>
                   </div>

@@ -82,7 +82,9 @@
                 <div class="col-6 col-md-3 mb-3">
                     <h5>About Us The Kiddos </h5>
                     <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                        <p>merupakan program belajar untuk para orangtua dan anak khususnya bagi pendidikan anak usia 0 - 6 tahun. Dalam program ini kami akan membedah tentang ilmu pengasuhan anak, pendidikan, sekolah dan lain lainya yang tentunya bermanfaat untuk orangtua dan anak.</p>
+                        <p>sebuah lembaga Pendidikan Anak Usia Dini Informal
+                        dalam bentuk Playschool atau sekolah bermain. The Kiddos Project telah berdiri sejak
+                        tahun 2019 dengan program playdate dan pop-up school untuk anak usia dini.</p>
                 </div>
             </div>
 
@@ -92,7 +94,7 @@
                 <ul class="nav flex-column">
                 <li class="nav-item mb-2">Head Office<p><i class="ri-home-3-line" style="color: #FDA8F8;font-size: 20px;"></i> Grand PGRI Residence 1 Tarumajaya Bekasi</p></li>
                 
-                <li class="nav-item mb-2"><p><i class="ri-smartphone-line" style="color: #FDA8F8;font-size: 20px;"></i> <a href="telp:+6285892638671">+62 858 92638671</a> OR <a href="telp:081284844535a">081284844535</a></p></li>
+                <li class="nav-item mb-2"><p><i class="ri-smartphone-line" style="color: #FDA8F8;font-size: 20px;"></i> <a href="telp:081284844535a">081284844535</a></p></li>
                 </ul>
             </div>
 

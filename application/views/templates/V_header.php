@@ -4,7 +4,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="The kiddos Project. merupakan program belajar untuk para orangtua dan anak">
+        <meta name="description" content="The kiddos Project. adalah sebuah lembaga Pendidikan Anak Usia Dini Informal dalam bentuk Playschool atau sekolah bermain. The Kiddos Project telah berdiri sejak tahun 2019 dengan program playdate dan pop-up school untuk anak usia dini.">
         <meta name="robots" content="index, follow">
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,6 +46,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('/home/visit') ?>">Visit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('/home/galeri') ?>">Galeri</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('/home/form_registrasi') ?>"><i class="bi bi-heart">Daftar Disini</i></a>
