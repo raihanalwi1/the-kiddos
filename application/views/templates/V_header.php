@@ -4,7 +4,8 @@
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+        <meta name="description" content="The kiddos Project. merupakan program belajar untuk para orangtua dan anak">
+        <meta name="robots" content="index, follow">
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,10 +19,13 @@
         <link rel="stylesheet" type="text/css" href="<?= base_url('asset/css/bootstrap.min.css')?>" />
         <link rel="stylesheet" type="text/css" href="<?= base_url('asset/css/style.css')?>" />
         <link rel="stylesheet" type="text/css" href="<?= base_url('asset/css/whatsapp.css')?>" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1695590652033895"
+     crossorigin="anonymous"></script>
+        <link rel="icon" href="<?= base_url('asset/image/logo.jpg')?>" type="image/gif">
         <title><?= $title?></title>
     </head>
     <body>
-    <?php  ?>
+
 
 <!------------------ HEADER ------------------>
 <nav class="navbar sticky-top navbar-expand-lg shadow-sm">
@@ -56,6 +60,7 @@
         </div>
     </div>
 </nav>
+
 <!------------------ End HEADER ------------------>
  <!-- CONTENT -->
  

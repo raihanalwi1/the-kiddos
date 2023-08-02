@@ -57,6 +57,7 @@
                         <a href="https://www.instagram.com/waterplayid/"><img src="<?= base_url('asset/image/sponsor (6).jpg') ?>" alt="Sponsor 6"></a>
                     </div>
                 </div>
+            </div>
                 <hr>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -78,10 +79,10 @@
         <div class="container">
         <footer class="py-5">
             <div class="row">
-            <div class="col-6 col-md-3 mb-3">
-                <h5>About Us The Kiddos </h5>
-                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                    <p>merupakan program belajar untuk para orangtua dan anak khususnya bagi pendidikan anak usia 0 - 6 tahun. Dalam program ini kami akan membedah tentang ilmu pengasuhan anak, pendidikan, sekolah dan lain lainya yang tentunya bermanfaat untuk orangtua dan anak.</p>
+                <div class="col-6 col-md-3 mb-3">
+                    <h5>About Us The Kiddos </h5>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                        <p>merupakan program belajar untuk para orangtua dan anak khususnya bagi pendidikan anak usia 0 - 6 tahun. Dalam program ini kami akan membedah tentang ilmu pengasuhan anak, pendidikan, sekolah dan lain lainya yang tentunya bermanfaat untuk orangtua dan anak.</p>
                 </div>
             </div>
 
@@ -119,16 +120,16 @@
             </div>
 
             <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-            <p>&copy; 2019 – <?php echo date('Y'); ?> The Kiddos Project. All right reserved &middot; <a href="<?= base_url('home/privacy')?>">Privacy</a> &middot; <a href="#">Terms</a></p>
-            <ul class="list-unstyled d-flex"> Sosial Media Kami 
-                <li class="ms-3"><a class="link-dark" href="https://www.tiktok.com/@thekiddosproject"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
-                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
-                </svg></a></li>
-                <li class="ms-3"><a class="link-dark" href="https://www.instagram.com/the.kiddosofc/"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-                <li class="ms-3"><a class="link-dark" href="mailto:thekiddosofc@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                </svg></a></li>
-            </ul>
+                <p>&copy; 2019 – <?php echo date('Y'); ?> The Kiddos Project. All right reserved &middot; <a href="<?= base_url('home/privacy')?>">Privacy</a> &middot; <a href="#">Terms</a></p>
+                <ul class="list-unstyled d-flex"> Sosial Media Kami 
+                    <li class="ms-3"><a class="link-dark" href="https://www.tiktok.com/@thekiddosproject"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
+                    </svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="https://www.instagram.com/the.kiddosofc/"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="mailto:thekiddosofc@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                    </svg></a></li>
+                </ul>
             </div>
             <a href="https://wa.me/081284844535" target="_blank" id="whatsappButton">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
@@ -139,8 +140,10 @@
         </div>
 
         <!-- JS -->
-        <script type="text/javascript" src="<?= base_url('asset/js/whatsapp.js') ?>"></script>
+        <!-- <script type="text/javascript" src="<?= base_url('asset/js/whatsapp.js') ?>"></script>
         <script type="text/javascript" src="<?= base_url('asset/js/bootstrap.js') ?>"></script>
-        <script type="text/javascript" src="<?= base_url('asset/js/bootstrap.min.js')?>"></script>
+        <script type="text/javascript" src="<?= base_url('asset/js/bootstrap.min.js')?>"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
     </body>
 </html>
