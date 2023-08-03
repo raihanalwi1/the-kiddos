@@ -144,6 +144,8 @@
     </div>
     <div class="form-group">
       <label for="pembayaran">Metode Pembayaran:</label>
+      <label class="required-label">* 4 Sesi Rp. 500.000-. Ribu</label>
+      <label class="required-label">* 1x Visit Rp. 150.000-. Ribu</label>
       <select id="pembayaran" name="pembayaran" required>
         <option >-- Pilih Pembayaran --</option>
         <option value="bca">BCA - 3691159742 A/N Fenti P</option>

@@ -41,28 +41,4 @@ function validateForm() {
       }
     });
   });
-  const tanggalInput = document.getElementById('tanggalKelas');
-
-
-tanggalInput.addEventListener('change', function() {
-const selectedDate = new Date(tanggalInput.value);
-const dayOfWeek = selectedDate.getDay();
-
-// 0 adalah hari Minggu, 6 adalah hari Sabtu
-if (dayOfWeek !== 0 && dayOfWeek !== 6) {
-  alert('Anda hanya dapat memilih tanggal pada hari Sabtu dan Minggu!');
-  tanggalInput.value = ''; // Reset nilai input jika tanggal tidak sesuai
-}
-});
-
-// Memastikan tanggal yang dipilih adalah hari Sabtu atau Minggu saat memilih tanggal dari kalender
-tanggalInput.addEventListener('input', function() {
-const selectedDate = new Date(tanggalInput.value);
-const dayOfWeek = selectedDate.getDay();
-
-// 0 adalah hari Minggu, 6 adalah hari Sabtu
-if (dayOfWeek !== 0 && dayOfWeek !== 6) {
-  alert('Anda hanya dapat memilih tanggal pada hari Sabtu dan Minggu!');
-  tanggalInput.value = ''; // Reset nilai input jika tanggal tidak sesuai
-}
-});
+ 
