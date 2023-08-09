@@ -3,24 +3,21 @@
         
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <?php 
+            $no = -1;
+            foreach ($banner as $key => $banners) : ?>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?= $key ?>"  <?= $key == 0 ? 'class="active"' : '' ?> aria-current="true" aria-label="Slide <?= $no++?>"></button>
+                
+            <?php endforeach; ?>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="<?= base_url('asset/image/Slide_1.png')?>" class="d-block w-100" alt="..." />
+            <?php 
+				foreach ($banner as $key => $banners): ?>
+                
+                <div class="carousel-item <?= $key == 0 ? 'active' : '' ?>">
+                    <img src="<?= base_url('asset/image/'.$banners->img_banner)?>" class="d-block w-100" alt="..." />
                 </div>
-                <div class="carousel-item">
-                    <img src="<?= base_url('asset/image/Slide_2.png')?>" class="d-block w-100" alt="..." />
-                </div>
-                <div class="carousel-item">
-                    <img src="<?= base_url('asset/image/Slide_3.png')?>" class="d-block w-100" alt="..." />
-                </div>
-                <div class="carousel-item">
-                    <img src="<?= base_url('asset/image/Slide_4.png')?>" class="d-block w-100" alt="..." />
-                </div>
+                <?php endforeach;?>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

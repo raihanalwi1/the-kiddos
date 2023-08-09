@@ -82,6 +82,11 @@
         <span class="label">Pertanyaan 4:</span>
         <span class="value"><?= $record->q4?></span>
       </div>
+      <div class="field">
+        <span class="label">Bukti:</span> <br/>
+        <img src="<?= base_url('asset/image/bukti/'.$record->bukti) ?>" alt="bukti" style="width:53%; height:20%;">
+        
+      </div>
     </div>
     <a href="<?= base_url('admin/data_anak')?>" class="back-link">Kembali</a>
   </div>

@@ -3,6 +3,8 @@
 
 <head>
   <title><?= $title; ?></title>
+  <link rel="icon" href="<?= base_url('asset/image/logo.jpg')?>" type="image/gif">
+
   <style>
     body {
   font-family: Arial, sans-serif;
@@ -68,6 +70,7 @@ h1 {
     <div class="menu">
       <ul>
         <li><a href="<?= base_url('admin') ?>">Beranda</a></li>
+        <li><a href="<?= base_url('admin/data_jadwal') ?>">Data Jadwal</a></li>
         <li><a href="<?= base_url('admin/data_anak') ?>">Data Register Anak</a></li>
         <li><a href="<?= base_url('auth/logout') ?>">Keluar</a></li>
       </ul>

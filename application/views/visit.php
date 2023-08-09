@@ -49,6 +49,7 @@
                             referrerpolicy="no-referrer-when-downgrade"
                         ></iframe>
                     </div>
+                    <a href="<?= base_url('asset/file/location.pdf')?>">Lihat PDF</a>
 
                 </div>
             </div>

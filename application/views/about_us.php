@@ -81,7 +81,7 @@
                     10. Closing<br/>
                     Kegiatan Penutup, Greeting dan foto bersama<br/>
                     </p>
-                    <a href="<?= base_url('asset/file/kegiatan.pdf')?>">Lihat PDF</a>
+                    <a href="<?= base_url('asset/file/agustus.pdf')?>">Lihat PDF</a>
                   </div>
               </div>
           </div>

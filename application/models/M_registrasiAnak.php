@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class M_registrasiAnak extends CI_model
 {
     public function get_register(){
+        $this->db->order_by('tanggal_registrasi', 'DESC');
         $query = $this->db->get('tb_registrasi');
         return $query->result();
     }
