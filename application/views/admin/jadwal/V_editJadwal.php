@@ -50,7 +50,7 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Tambah Data Jadwal</h4>
+                            <h4>Edit Data Jadwal</h4>
                         </div>
                         <div class="card-body">
                             <form action="<?= base_url('admin/update_jadwal/'.$jadwal->id_jadwal);?>" method="post" enctype="multipart/form-data">
@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="tanggal">Tanggal</label>
-                                    <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?= $jadwal->tanggal ?>" required>
+                                    <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?= $jadwal->tanggal ?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="kategori_jadwal">Kategori Jadwal</label>
@@ -72,7 +72,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="keterangan">Keterangan</label>
-                                    <textarea class="form-control" id="keterangan" name="keterangan" rows="4" required><?php echo $jadwal->keterangan; ?></textarea>
+                                    <textarea id="keterangan" name="keterangan"><?php echo $jadwal->keterangan; ?></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="gambar_jadwal">Gambar Jadwal</label>

@@ -1,3 +1,4 @@
+
 <style>
     /* Gaya tampilan tabel */
 table {
@@ -61,39 +62,42 @@ button:hover {
 
 </style>
 <div class="content">
-      <h2>Data Registrasi Anak Sensory</h2>
-      <?= $this->session->flashdata('pesan'); ?>
-      
-      <table id="datatable"class="table table-striped table-bordered" width="100%" cellspacing="0">
-        <thead>
-          <tr>
+  <h2>Data Registrasi Anak Program</h2>
+  <div class="search-container" style="text-align:right;">
+          <input type="text" id="searchInput" name="searchKeyword" placeholder="Cari berdasarkan nama...">
+          <button type="button" id="searchButton">Cari</button>
+      </div>
+  <?= $this->session->flashdata('pesan'); ?>
+  
+  <table id="datatable" class="table table-striped table-bordered" width="100%" cellspacing="0">
+  <thead>
+        <tr>
             <th>NO</th>
-            <th>Nama Anak</th>
+            <th>Nama Lengkap</th>
             <th>Tanggal Registrasi</th>
             <th style="colspan:2">Aksi</th>
-          </tr>
-        </thead>
-        <?php $no=1;
+        </tr>
+    </thead>
+    
+    <?php $no=1;
         foreach($record as $row):?>
-        <tbody id="dataBody">
+        <tbody>
           <tr>
             <td><?= $no++?></td>
-            <td><?= $row->nama_anak?></td>
+            <td><?= $row->nama_lengkap?></td>
             <td><?= $row->tanggal_registrasi?></td>
             <td>
-              <button  onclick="window.location.href='<?= base_url('admin/detail_anak/'. $row->id_registrasi)?>';">Lihat</button>
+              <button  onclick="window.location.href='<?= base_url('admin/detail_anak_program/'. $row->id_registrasip)?>';">Lihat</button>
               <!-- <button  onclick="window.location.href='#';">Edit</button> -->
-              <button style="background-color: red;" onclick="window.location.href='<?= base_url('admin/hapus_anak/'. $row->id_registrasi)?>';">Hapus</button>
-            </td>
+              <button style="background-color: red;" onclick="window.location.href='<?= base_url('admin/hapus_anak_program/'. $row->id_registrasip)?>';">Hapus</button>
+            </td>       
           </tr>
           
           <!-- Data lainnya -->
         </tbody>
         <?php endforeach;?>
         
-      </table>
-      <!-- <div id="pagination"> -->
-      <!-- Tampilkan link halaman di sini -->
-      <!-- </div> -->
-      <script src="<?= base_url('asset/js/script-dataAnak.js')?>">  
-      </script>
+  </table>
+  <script src="<?= base_url('asset/js/script-dataAnak.js')?>"> </script> 
+  
+

@@ -16,7 +16,7 @@
                     <div class="col-md-6 mt-3">
                         <h3>Contact Message</h3>
 
-                        <form action="#" method="post" class="row g-3 mt-4">
+                        <form action="<?= base_url('home/send_email')?>" method="post" class="row g-3 mt-4">
                             <div class="col-md-6">
                                 <label for="name" class="form-label">Nama</label>
                                 <input type="text" class="form-control" name="name" id="name" />

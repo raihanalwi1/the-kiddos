@@ -93,7 +93,7 @@ button:hover {
             <td>
               <button  onclick="window.location.href='<?= base_url('admin/edit_jadwal/'. $row->id_jadwal)?>';">Edit</button>
               <!-- <button  onclick="window.location.href='#';">Edit</button> -->
-              <button onclick="window.location.href='<?= base_url('admin/hapus_jadwal/'. $row->id_jadwal)?>';">Hapus</button>
+              <button style="background-color: red;" onclick="window.location.href='<?= base_url('admin/hapus_jadwal/'. $row->id_jadwal)?>';">Hapus</button>
             </td>
           </tr>
           

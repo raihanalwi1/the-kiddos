@@ -58,11 +58,19 @@
                         <li><a class="dropdown-item" href="<?= base_url('home/jadwalBulanan')?>"> <i class="ri-calendar-line"></i>Jadwal Bulanan</a></li>
                         <li><a class="dropdown-item" href="<?= base_url('home/jadwalEvent')?>"><i class="ri-calendar-event-line"></i>Jadwal Event</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('home/reviews')?>">Testimoni</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('/home/form_registrasi') ?>"><i class="bi bi-heart">Daftar Disini</i></a>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Daftar disini
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="<?= base_url('/home/form_registrasi') ?>">Registrasi Sensory</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('home/form_registrasi_program')?>">Registrasi Program</a></li>
+                        
+                    </ul>
                 </li>
             </ul>
             <span class="navbar-text">

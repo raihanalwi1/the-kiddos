@@ -46,7 +46,7 @@ li {
       <div class="day">
         <h2><?= $row->judul_jadwal?></h2>
         <ul>
-          <li><img src="<?= base_url('asset/image/jadwal/'.$row->gambar_jadwal)?>" alt=""></li>
+          <li><img src="<?= base_url('asset/image/jadwal/'.$row->gambar_jadwal)?>" alt="" width="150px"></li>
           <li><?= $row->tanggal?></li>
           <li><?= $row->keterangan?></li>
         </ul>

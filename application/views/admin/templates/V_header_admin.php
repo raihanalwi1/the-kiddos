@@ -4,7 +4,11 @@
 <head>
   <title><?= $title; ?></title>
   <link rel="icon" href="<?= base_url('asset/image/logo.jpg')?>" type="image/gif">
-
+  <script src="https://cdn.tiny.cloud/1/htxbljzeh2xolq17uq0bfreiveo1l2gng3wungtepmg6gbb4/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  
   <style>
     body {
   font-family: Arial, sans-serif;
@@ -70,8 +74,11 @@ h1 {
     <div class="menu">
       <ul>
         <li><a href="<?= base_url('admin') ?>">Beranda</a></li>
+        <!-- <li><a href="<?= base_url('admin/banner') ?>">Banner</a></li> -->
+        <li><a href="<?= base_url('admin/data_review') ?>">Review</a></li>
         <li><a href="<?= base_url('admin/data_jadwal') ?>">Data Jadwal</a></li>
-        <li><a href="<?= base_url('admin/data_anak') ?>">Data Register Anak</a></li>
+        <li><a href="<?= base_url('admin/data_anak') ?>">Data Register Anak Sensory</a></li>
+        <li><a href="<?= base_url('admin/data_anak_program') ?>">Data Register Anak Program</a></li>
         <li><a href="<?= base_url('auth/logout') ?>">Keluar</a></li>
       </ul>
     </div>

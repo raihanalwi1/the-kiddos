@@ -47,6 +47,7 @@
         font-size: 14px;
     }
     input[type="file"] {
+        width: 100%;
         padding: 8px;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -86,7 +87,7 @@
   </style>
   
   <hr>
-  <h2>Form Registrasi Anak</h2>
+  <h2>Form Registrasi Anak Sensory</h2>
   <?= $this->session->flashdata('pesan'); ?>
 
   <form action="<?= base_url('home/form_registrasi')?>" method="POST" enctype="multipart/form-data">
@@ -103,7 +104,7 @@
     <div class="form-group">
       <label for="tanggalKelas">Pilih Tanggal Kelas:</label>
       <label class="required-label">* Hanya tersedia di hari sabtu & minggu.</label>
-      <input type="date" id="tanggalKelas" name="tanggalKelas" min="2023-08-01" max="2023-09-30" required>
+      <input type="date" id="tanggalKelas" name="tanggalKelas" required>
     </div>
     <div class="form-group">
       <label for="noWa">No WhatsApp:</label>
@@ -163,12 +164,14 @@
       <label class="required-label">* 1x Visit Rp. 150.000-. Ribu</label>
       <select id="pembayaran" name="pembayaran" required>
         <option >-- Pilih Pembayaran --</option>
-        <option value="bca">BCA - 3691159742 A/N Fenti P</option>
+        <option value="bca">BCA - 3691159742 A/N Fenti Pramita</option>
       </select>
     </div>
     <div class="form-group">
       <label for="upload">Upload Bukti Pembayaran:</label>
       <input type="file" name="userfile" accept="image/*" required>
+      <label class="required-label">* format upload : .jpg, .png</label>
+
     </div>
     <button type="submit" id="submitButton">Daftar</button>
     <a type="button" href="<?= base_url()?>" class="btn btn-primary">Kembali</a>

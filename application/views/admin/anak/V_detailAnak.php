@@ -33,7 +33,9 @@
 </style>
 <div class="container">
     <h2>Detail Data Registrasi Anak</h2>
+    
     <div class="user-details">
+
     <div class="field">
         <span class="label">Tanggal Registrasi:</span>
         <span class="value"><?= $record->tanggal_registrasi?></span>
@@ -67,19 +69,19 @@
         <span class="value"><?= $record->lokasi_kelas?></span>
       </div>
       <div class="field">
-        <span class="label">Pertanyaan 1:</span>
+        <span class="label">Apakah anak sedang atau pernah menjalani terapi tumbuh kembang?</span>
         <span class="value"><?= $record->q1?>, <?= $record->q1_ex?></span>
       </div>
       <div class="field">
-        <span class="label">Pertanyaan 2:</span>
+        <span class="label">Apakah anak memiliki alergi?</span>
         <span class="value"><?= $record->q2?>, <?= $record->q2_ex?></span>
       </div>
       <div class="field">
-        <span class="label">Pertanyaan 3:</span>
+        <span class="label">Apakah anak memiliki riwayat penyakit tertentu?</span>
         <span class="value"><?= $record->q3?>, <?= $record->q3_ex?></span>
       </div>
       <div class="field">
-        <span class="label">Pertanyaan 4:</span>
+        <span class="label">Apakah anak di perbolehkan di foto/video atau di post di media sosial The Kiddos?</span>
         <span class="value"><?= $record->q4?></span>
       </div>
       <div class="field">
@@ -90,3 +92,4 @@
     </div>
     <a href="<?= base_url('admin/data_anak')?>" class="back-link">Kembali</a>
   </div>
+  

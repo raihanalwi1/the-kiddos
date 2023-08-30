@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="keterangan">Keterangan</label>
-                                    <textarea class="form-control" id="keterangan" name="keterangan" rows="4" required></textarea>
+                                    <textarea id="keterangan" name="keterangan"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="gambar_jadwal">Gambar Jadwal</label>

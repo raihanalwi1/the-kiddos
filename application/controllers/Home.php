@@ -7,6 +7,7 @@ class Home extends CI_Controller {
         $this->load->model('M_registrasiAnak');
         $this->load->model('M_banner');
         $this->load->model('M_jadwal');
+        $this->load->model('M_review');
 		$this->load->helper(array('url','form'));
 		$this->load->library('email','upload');
 	}
@@ -61,35 +62,85 @@ class Home extends CI_Controller {
 		  $subjek = $this->input->post('subject');
 		  $pesan = $this->input->post('pesan');
 	
-		  // Konfigurasi email
-		  $config['mailtype'] = 'html';
-		  $this->email->initialize($config);
-	
-		  // Pengirim email
-		  $this->email->from($email, $nama);
-	
-		  // Penerima email
-		  $this->email->to('raihanalwi51@gmail.com'); // Ganti dengan alamat email penerima
-	
-		  // Subjek email
-		  $this->email->subject($subjek);
-	
-		  // Isi email
-		  $this->email->message($pesan);
-	
-		  // Kirim email
-		  if ($this->email->send()) {
-			// Kirim email berhasil, redirect ke halaman terima kasih
-			redirect('home/visit');
-		  } else {
-			// Kirim email gagal, tampilkan pesan error
-			echo $this->email->print_debugger();
+		  $sendToEmail = $email;
+		  $subject = $subjek;
+		  $message = $pesan;
+		  $this->load->initialize('email');
+		  $this->email->set_newline("\r\n");
+		  $this->email->from($sendToEmail);
+		  $this->email->to('thekiddo@thekiddosproject.com');
+		  $this->email->cc('thekiddosofc@gmail.com');
+		  $this->email->subject($subject);
+		  $this->email->message($message);
+		  if($this->email->send()){
+			$this->session->set_flashdata('pesan', '<div class="alert alert-success">Pesan sudah terkirim.</div>');
+			redirect('home/', 'refresh');
+		  }else{
+			echo 'Email sending error!';
 		  }
 	  }
+	public function reviews(){
+		$data1 = ['title' => 'Reviews || The Kiddos Project'];
+        $data['reviews'] = $this->M_review->getReviews();
+
+		$this->load->view('templates/V_header', $data1);
+        $this->load->view('review', $data);
+		$this->load->view('templates/V_footer');
+
+	}
     public function privacy(){
 		$data = ['title' => 'Law Privacy The Kiddos Project'];
 		$this->load->view('templates/V_header', $data);
 		$this->load->view('law/privacy');
+		$this->load->view('templates/V_footer');
+
+	}
+	public function terms(){
+		$data = ['title' => 'Terms The Kiddos Project'];
+		$this->load->view('templates/V_header', $data);
+		$this->load->view('law/terms');
+		$this->load->view('templates/V_footer');
+
+	}
+	public function form_registrasi_program(){
+		$data1 = ['title' => 'Form Registrasi Anak Program || The Kiddos Project'];
+		$this->load->view('templates/V_header', $data1);
+		$this->load->view('form_registrasi_program');
+		if($this->input->post()){
+			$waktuSekarang = date('Y-m-d');
+			$jadwal = $this->input->post('jadwal');
+			$jdwl_str = implode(', ', $jadwal);
+            $data = array(
+                'nama_lengkap' => $this->input->post('nama_lengkap'),
+                'nama_panggilan' => $this->input->post('nama_panggilan'),
+                'kelas' => $this->input->post('kelas'),
+                'tempat_lahir' => $this->input->post('tempat_lahir'),
+                'tanggal_lahir' => $this->input->post('tanggal_lahir'),
+                'kategori_kelas' => $this->input->post('kategori_kelas'),
+                'jadwal' => $jdwl_str,
+                'nama_ayah' => $this->input->post('nama_ayah'),
+                'nama_ibu' => $this->input->post('nama_ibu'),
+                'no_hp' => $this->input->post('no_hp'),
+				'tanggal_registrasi' => $waktuSekarang,
+                'kontak_darurat' => $this->input->post('kontak_darurat'),
+                'alamat_email' => $this->input->post('alamat_email'),
+                'size_baju' => $this->input->post('size_baju'),
+                'lokasi_kelas' => $this->input->post('lokasi_kelas'),
+                'q1' => $this->input->post('pertanyaan1'),
+				'q1_ex' => $this->input->post('q1_ex'),
+				'q2' => $this->input->post('pertanyaan2'),
+				'q2_ex' => $this->input->post('q2_ex'),
+				'q3' => $this->input->post('pertanyaan3'),
+				'q3_ex' => $this->input->post('q3_ex'),
+                'q4' => $this->input->post('pertanyaan4')
+            );
+			// var_dump($data) or die;
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success">Data Berhasil ditambahkan!</div>');
+            $this->M_registrasiAnak->tambah_registerp($data);
+            redirect('home/', 'refresh');
+        }
+		$this->session->set_flashdata('pesan', '<div class="alert alert-danger">Pengisian Registrasi gagal! Silahkan mengisi ulang form sesuai ketentuan..</div>');
+
 	}
 	public function form_registrasi(){
 		$data1 = ['title' => 'Form Registrasi Anak || The Kiddos Project '];
@@ -97,7 +148,7 @@ class Home extends CI_Controller {
 		$this->load->view('form_registrasi');
 		
 		$config['upload_path']   = './asset/image/bukti';
-			$config['allowed_types'] = 'png|jpg|jpeg';
+			$config['allowed_types'] = 'png|jpg|jpeg|JPEG';
 			$config['file_name']    = date("dmy") . "_" .'Bukti';
 			$config['max_size']      = 1000; // KB
 	
@@ -108,7 +159,6 @@ class Home extends CI_Controller {
 				
 			} else {
 				$waktuSekarang = date('Y-m-d');
-	
 				$data = array(
 					'nama_anak' => $this->input->post('namaAnak'),
 					'usia' => $this->input->post('usia'),
@@ -133,7 +183,9 @@ class Home extends CI_Controller {
 	
 				$this->session->set_flashdata('pesan', '<div class="alert alert-success">Pengisian Registrasi Telah berhasil! Silahkan hubungi admin..</div>');
 				redirect('home/', 'refresh');
+			
 			}
+			$this->session->set_flashdata('pesan', '<div class="alert alert-danger">Pengisian Registrasi gagal! Silahkan mengisi ulang form sesuai ketentuan..</div>');
 			
 	} 
 	

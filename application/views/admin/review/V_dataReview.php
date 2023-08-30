@@ -61,16 +61,22 @@ button:hover {
 
 </style>
 <div class="content">
-      <h2>Data Registrasi Anak Sensory</h2>
+      <h2>Data Review</h2>
       <?= $this->session->flashdata('pesan'); ?>
-      
-      <table id="datatable"class="table table-striped table-bordered" width="100%" cellspacing="0">
+      <button type="button" onclick="window.location.href='<?= base_url('admin/tambah_review')?>'">Tambah</button>
+      <div class="search-container" style="text-align:right;">
+          <input type="text" id="searchInput" name="searchKeyword" placeholder="Cari berdasarkan nama...">
+          <button type="button" id="searchButton">Cari</button>
+      </div>
+      <table>
         <thead>
           <tr>
             <th>NO</th>
-            <th>Nama Anak</th>
-            <th>Tanggal Registrasi</th>
-            <th style="colspan:2">Aksi</th>
+            <th>Nama Review</th>
+            <th>Tanggal Review</th>
+            <th>Rating</th>
+            <th>Comment</th>
+            <th>Aksi</th>
           </tr>
         </thead>
         <?php $no=1;
@@ -78,12 +84,13 @@ button:hover {
         <tbody id="dataBody">
           <tr>
             <td><?= $no++?></td>
-            <td><?= $row->nama_anak?></td>
-            <td><?= $row->tanggal_registrasi?></td>
+            <td><?= $row->nama_review?></td>
+            <td><?= $row->tanggal_review?></td>
+            <td><?= $row->rating?></td>
+            <td><?= $row->comment?></td>
             <td>
-              <button  onclick="window.location.href='<?= base_url('admin/detail_anak/'. $row->id_registrasi)?>';">Lihat</button>
               <!-- <button  onclick="window.location.href='#';">Edit</button> -->
-              <button style="background-color: red;" onclick="window.location.href='<?= base_url('admin/hapus_anak/'. $row->id_registrasi)?>';">Hapus</button>
+              <button style="background-color: red;" onclick="window.location.href='<?= base_url('admin/hapus_review/'. $row->id_review)?>';">Hapus</button>
             </td>
           </tr>
           
